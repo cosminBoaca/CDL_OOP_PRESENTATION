@@ -1,10 +1,10 @@
 #include <list>
+#include <vector>
 using namespace std;
 
 class IStack {
     //Adauga element
-    virtual void push(int elem) = 0;
-    //Scoate element din varf
+    virtual void push(int elem) = 0; //Scoate element din varf
     virtual void pop() = 0;
     //Returneaza elementul din varf
     virtual int top() = 0;
@@ -18,21 +18,18 @@ class IStack {
 class Stack : public IStack {
     /*
        TODO implementati o stiva bazata pe un vector
-       Constructorul va primi numarul maxim de elemente din stiva
-       Vectorul va fi alocat dinamic
+       Folositi clasa vector. Metodele de care aveti nevoie sunt
+       back, push_back, pop_back si empty
        Aveti grija sa eliberati memoria pentru vector in destructor
     */
-
+    vector<int> st;
 public:
     void push(int elem) {
     }
-
     void pop() {
     }
-
     int top() {
     }
-
     bool isEmpty() {
     }
 };
@@ -46,7 +43,7 @@ class Stack : public IStack {
        Metodele de care aveti nevoie sunt back, push_back,
        pop_back si empty
     */
-    list<int> lst;
+    list<int> st;
 
 public:
     void push(int elem) {
